@@ -1,0 +1,36 @@
+query($id: Int){
+	categories(where: {categoryId: {eq: $id} }){			
+		categoriesForm{
+			order
+			form{
+				formDefId
+				formDefName
+				formLabel
+				formDescription
+				fields{
+					fieldDefId
+					formDefId
+					name
+					description
+					image
+					label
+					order
+					placeholder
+					dataTypeId
+					required
+					default
+					editable
+					hidden
+					colspan						
+					lenght
+					fieldPatternId
+					customPattern
+					optionValues
+					isArray
+					objFormDefId			
+					pattern{pattern}
+				}
+			}
+		}	
+	}
+}
